@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | Crystal Quest Limited</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        /* CSS Variables - Gold Theme */
+        :root {
+            --primary-gold: #D4AF37;
+            --dark-gold: #B8860B;
+            --light-gold: #F5E8B5;
+            --dark-bg: #1a1a1a;
+            --light-bg: #f8f8f8;
+            --text-dark: #333;
+            --text-light: #fff;
+            --section-padding: 80px 0;
+        }
+        
+        /* Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            background-color: var(--light-bg);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        section {
+            padding: var(--section-padding);
+        }
+        
+        h1, h2, h3, h4 {
+            line-height: 1.3;
+            margin-bottom: 1rem;
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+        }
+        
+        h2 {
+            font-size: 2.2rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+        
+        h2:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background: var(--primary-gold);
+            margin: 15px auto;
+        }
+        
+        p {
+            margin-bottom: 1.5rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--primary-gold);
+            color: var(--dark-bg);
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+        }
+        
+        .btn:hover {
+            background-color: var(--dark-gold);
+            color: var(--text-light);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .btn-large {
+            padding: 15px 40px;
+            font-size: 1.1rem;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: rgba(26, 26, 26, 0.9);
+            color: var(--text-light);
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--primary-gold);
+        }
+        
+        .logo span {
+            color: var(--text-light);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 25px;
+        }
+        
+        nav ul li a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            position: relative;
+        }
+        
+        nav ul li a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--primary-gold);
+            transition: width 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: var(--primary-gold);
+        }
+        
+        nav ul li a:hover:after {
+            width: 100%;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text-light);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .services-hero {
+            height: 60vh;
+            position: relative;
+            overflow: hidden;
+            margin-top: 70px;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1586773860418-d37222d8fce3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--text-light);
+        }
+        
+        .services-hero-content {
+            max-width: 800px;
+            padding: 0 20px;
+        }
+        
+        .services-hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+        }
+        
+        .services-hero-content p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+        }
+        
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin: 50px 0;
+        }
+        
+        .service-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .service-image {
+            height: 250px;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .service-content {
+            padding: 30px;
+        }
+        
+        .service-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--dark-bg);
+            display: flex;
+            align-items: center;
+        }
+        
+        .service-icon {
+            font-size: 1.8rem;
+            color: var(--primary-gold);
+            margin-right: 15px;
+        }
+        
+        .service-features {
+            list-style: none;
+            margin: 20px 0;
+        }
+        
+        .service-features li {
+            padding: 8px 0;
+            position: relative;
+            padding-left: 25px;
+        }
+        
+        .service-features li:before {
+            content: "✓";
+            color: var(--primary-gold);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        
+        /* Process Section */
+        .process-section {
+            background-color: #f9f9f9;
+        }
+        
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .process-step {
+            background: white;
+            padding: 40px 25px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+        }
+        
+        .process-step:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .step-number {
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 40px;
+            background: var(--primary-gold);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .step-icon {
+            font-size: 3rem;
+            color: var(--primary-gold);
+            margin-bottom: 20px;
+        }
+        
+        .process-step h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+        }
+        
+        /* CTA Section */
+        .services-cta {
+            background: linear-gradient(135deg, var(--dark-bg), #2c2c2c);
+            color: white;
+            text-align: center;
+        }
+        
+        .services-cta h2 {
+            color: white;
+        }
+        
+        .services-cta h2:after {
+            background: var(--primary-gold);
+        }
+        
+        .cta-content {
+            max-width: 800px;
+            margin: 0 auto 40px;
+        }
+        
+        .benefits-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 40px 0;
+        }
+        
+        .benefit-item {
+            display: flex;
+            align-items: center;
+            background: rgba(255,255,255,0.1);
+            padding: 15px 20px;
+            border-radius: 4px;
+        }
+        
+        .benefit-item i {
+            color: var(--primary-gold);
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark-bg);
+            color: var(--text-light);
+            padding: 60px 0 20px;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h3 {
+            color: var(--primary-gold);
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+        }
+        
+        .footer-column p {
+            margin-bottom: 20px;
+            color: #ccc;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-column ul li a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-column ul li a:hover {
+            color: var(--primary-gold);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            color: #ccc;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .social-links a:hover {
+            background: var(--primary-gold);
+            color: var(--dark-bg);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+            color: #999;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .services-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .services-hero-content h1 {
+                font-size: 2.5rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            nav ul {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 70px);
+                background: var(--dark-bg);
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                padding-top: 40px;
+                transition: left 0.3s;
+            }
+            
+            nav ul.active {
+                left: 0;
+            }
+            
+            nav ul li {
+                margin: 15px 0;
+            }
+            
+            .services-grid,
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .services-hero-content h1 {
+                font-size: 2rem;
+            }
+            
+            .services-hero-content p {
+                font-size: 1.1rem;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .benefits-list {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .services-hero-content h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <img src="assets/images/logo.jpeg" alt="Crystal Quest Limited" class="logo-image">
+            </div>
+            <nav>
+                <ul id="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html" class="active">Services</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html" class="btn">Contact Us</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-btn" id="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="services-hero">
+        <div class="services-hero-content">
+            <h1>Our Premium Gold Services</h1>
+            <p>Comprehensive gold solutions from mining to market, delivered with integrity and expertise.</p>
+            <a href="#contact" class="btn btn-large">Get a Custom Quote</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="container">
+        <h2>Our Comprehensive Gold Services</h2>
+        <p style="text-align: center; max-width: 800px; margin: 0 auto 40px;">Crystal Quest Limited offers end-to-end gold services, ensuring quality, security, and transparency at every stage of the process.</p>
+        
+        <div class="services-grid">
+            <!-- Gold Mining Service -->
+            <div class="service-card">
+                <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1586773860418-d37222d8fce3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');"></div>
+                <div class="service-content">
+                    <h3><i class="fas fa-mountain service-icon"></i> Gold Mining</h3>
+                    <p>We operate ethically-sourced mining operations with full environmental compliance and transparency. Our mining sites are carefully selected for their high-yield potential and sustainable extraction capabilities.</p>
+                    <ul class="service-features">
+                        <li>Ethical & environmentally responsible mining</li>
+                        <li>High-yield, geologically verified reserves</li>
+                        <li>Advanced extraction technology</li>
+                        <li>Full regulatory compliance</li>
+                        <li>Transparent chain of custody</li>
+                    </ul>
+                    <a href="#contact" class="btn">Learn More</a>
+                </div>
+            </div>
+            
+            <!-- Mineral Consultation -->
+            <div class="service-card">
+                <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1589652717521-10c0d092dea9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');"></div>
+                <div class="service-content">
+                    <h3><i class="fas fa-chart-line service-icon"></i> Mineral Consultation</h3>
+                    <p>Our expert geologists and mining engineers provide comprehensive consultation services for mineral exploration, resource assessment, and mining optimization to maximize your investment returns.</p>
+                    <ul class="service-features">
+                        <li>Geological surveying & resource assessment</li>
+                        <li>Mining feasibility studies</li>
+                        <li>Investment analysis & risk assessment</li>
+                        <li>Regulatory compliance guidance</li>
+                        <li>Market trend analysis</li>
+                    </ul>
+                    <a href="#contact" class="btn">Consult Our Experts</a>
+                </div>
+            </div>
+            
+            <!-- Gold Buying & Selling -->
+            <div class="service-card">
+                <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1614594975525-4584cef46a17?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');"></div>
+                <div class="service-content">
+                    <h3><i class="fas fa-hand-holding-usd service-icon"></i> Gold Buying & Selling</h3>
+                    <p>We facilitate secure transactions for buying and selling gold with transparent pricing based on real-time market rates. Our services cater to both individual investors and institutional clients.</p>
+                    <ul class="service-features">
+                        <li>Competitive market-based pricing</li>
+                        <li>Secure transaction processing</li>
+                        <li>Various gold products available</li>
+                        <li>Instant valuation services</li>
+                        <li>Confidential & discreet transactions</li>
+                    </ul>
+                    <a href="#contact" class="btn">View Current Prices</a>
+                </div>
+            </div>
+            
+            <!-- Refinery & Smelting -->
+            <div class="service-card">
+                <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1586796876136-bb6c8bceef15?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');"></div>
+                <div class="service-content">
+                    <h3><i class="fas fa-fire service-icon"></i> Refinery & Smelting</h3>
+                    <p>Our state-of-the-art refining and smelting processes transform raw gold into 99.99% pure investment-grade products with LBMA certification, ensuring maximum value and global recognition.</p>
+                    <ul class="service-features">
+                        <li>LBMA-certified refining processes</li>
+                        <li>99.99% purity guarantee</li>
+                        <li>Custom bar sizes & shapes</li>
+                        <li>Quality assurance & certification</li>
+                        <li>Environmentally responsible methods</li>
+                    </ul>
+                    <a href="#contact" class="btn">Explore Refining Options</a>
+                </div>
+            </div>
+            
+            <!-- Logistics -->
+            <div class="service-card">
+                <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1551288043-b5da0ea3a8cf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');"></div>
+                <div class="service-content">
+                    <h3><i class="fas fa-shipping-fast service-icon"></i> Secure Logistics</h3>
+                    <p>We provide fully insured, military-grade secure logistics for transporting precious metals globally. Our specialized carriers and tracking systems ensure your assets arrive safely at their destination.</p>
+                    <ul class="service-features">
+                        <li>Fully insured shipments</li>
+                        <li>Real-time GPS tracking</li>
+                        <li>Specialized precious metals carriers</li>
+                        <li>Global customs expertise</li>
+                        <li>Secure storage options</li>
+                    </ul>
+                    <a href="#contact" class="btn">Arrange Secure Transport</a>
+                </div>
+            </div>
+            
+            <!-- Gold Investment Consultation -->
+            <div class="service-card">
+                <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');"></div>
+                <div class="service-content">
+                    <h3><i class="fas fa-coins service-icon"></i> Gold Investment Consultation</h3>
+                    <p>Our financial experts provide personalized guidance on gold investment strategies, portfolio diversification, and market timing to help you make informed decisions for wealth preservation and growth.</p>
+                    <ul class="service-features">
+                        <li>Personalized investment strategies</li>
+                        <li>Market analysis & timing advice</li>
+                        <li>Portfolio diversification planning</li>
+                        <li>Risk assessment & management</li>
+                        <li>Wealth preservation strategies</li>
+                    </ul>
+                    <a href="#contact" class="btn">Schedule Consultation</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process-section">
+        <div class="container">
+            <h2>Our Integrated Service Process</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto;">From initial consultation to final delivery, our integrated approach ensures seamless service delivery at every step.</p>
+            
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <div class="step-icon"><i class="fas fa-handshake"></i></div>
+                    <h3>Consultation & Assessment</h3>
+                    <p>We begin with a thorough understanding of your needs, goals, and requirements to tailor our services accordingly.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <div class="step-icon"><i class="fas fa-search"></i></div>
+                    <h3>Resource Evaluation</h3>
+                    <p>Our experts conduct detailed analysis and evaluation to determine the best approach for your specific situation.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <div class="step-icon"><i class="fas fa-cogs"></i></div>
+                    <h3>Service Implementation</h3>
+                    <p>We execute the agreed-upon services with precision, maintaining the highest standards of quality and security.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <div class="step-icon"><i class="fas fa-clipboard-check"></i></div>
+                    <h3>Quality Assurance</h3>
+                    <p>Every service undergoes rigorous quality checks and verification to ensure it meets our exacting standards.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">5</div>
+                    <div class="step-icon"><i class="fas fa-shipping-fast"></i></div>
+                    <h3>Secure Delivery</h3>
+                    <p>We ensure safe, insured, and tracked delivery of your assets to the designated location anywhere in the world.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="services-cta" id="contact">
+        <div class="container">
+            <h2>Ready to Partner with Gold Experts?</h2>
+            <div class="cta-content">
+                <p>Whether you're looking to invest in gold, develop mining operations, or need secure logistics for precious metals, our team of experts is ready to assist you with tailored solutions.</p>
+            </div>
+            
+            <div class="benefits-list">
+                <div class="benefit-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Decades of Industry Experience</span>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Global Network & Reach</span>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Transparent Pricing</span>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Secure & Insured Operations</span>
+                </div>
+            </div>
+            
+            <a href="contact.html" class="btn btn-large">Get a Custom Quote Today</a>
+            
+            <div class="risk-reversal" style="margin-top: 40px;">
+                <p><strong>Your Assurance:</strong> No Obligation Consultation • Full Confidentiality • Client-Focused Solutions</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>Crystal Quest Limited</h3>
+                    <p>Your trusted partner for ethically sourced, certified gold services from mining to market delivery.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li><a href="#">Gold Mining</a></li>
+                        <li><a href="#">Mineral Consultation</a></li>
+                        <li><a href="#">Gold Buying & Selling</a></li>
+                        <li><a href="#">Refinery & Smelting</a></li>
+                        <li><a href="#">Secure Logistics</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="#">Our Process</a></li>
+                        <li><a href="#">Certifications</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Bwebajja, Kampala Uganda</li>
+                        <li><i class="fas fa-phone"></i> +256 (0) 393-103-608</li>
+                        <li><i class="fas fa-envelope"></i> info@christalquest.com</li>
+                        <li><i class="fas fa-clock"></i> Mon-Fri: 9AM-6PM EAT</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 Crystal Quest Limited. All rights reserved. | Privacy Policy | Terms of Service</p>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+        const navMenu = document.getElementById('nav-menu');
+        
+        mobileMenuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            mobileMenuToggle.innerHTML = navMenu.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(26, 26, 26, 0.95)';
+                header.style.padding = '10px 0';
+            } else {
+                header.style.background = 'rgba(26, 26, 26, 0.9)';
+                header.style.padding = '15px 0';
+            }
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (navMenu.classList.contains('active')) {
+                        navMenu.classList.remove('active');
+                        mobileMenuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
