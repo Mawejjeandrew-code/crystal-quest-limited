@@ -6,13 +6,60 @@
     <title>Crystal Quest Limited | Premium Gold Solutions</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Updated Logo Styles with Company Name */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-image {
+    height: 40px;
+    width: auto;
+    transition: all 0.3s ease;
+}
+
+.logo-text {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: var(--primary-gold);
+    line-height: 1;
+}
+
+.logo-text span {
+    color: var(--text-light);
+}
+
+/* Mobile responsiveness for logo */
+@media (max-width: 768px) {
+    .logo-text {
+        font-size: 1.3rem;
+    }
+    
+    .logo-image {
+        height: 35px;
+    }
+}
+
+@media (max-width: 576px) {
+    .logo-text {
+        font-size: 1.1rem;
+    }
+    
+    .logo {
+        gap: 8px;
+    }
+}
+    </style>
 </head>
 <body>
     <!-- Header -->
     <header>
         <div class="container header-container">
             <div class="logo">
-                <img src="assets/images/logo.jpeg" alt="Christal Quest Limited" class="logo-image">
+                <img src="assets/images/logo.jpeg" alt="Crystal Quest Limited" class="logo-image">
+                <div class="logo-text">Crystal <span>Quest</span></div>
             </div>
             <nav>
                 <ul id="nav-menu">
@@ -33,7 +80,7 @@
     <section class="hero" id="home">
         <div class="hero-slides">
             <!-- Slide 1 -->
-            <div class="hero-slide active" style="background-image: url('https://images.unsplash.com/photo-1586773860418-d37222d8fce3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');">
+            <div class="hero-slide active" style="background-image: url('assets/images/director.png');">
                 <div class="hero-content">
                     <h1>Premium Gold Mining Operations</h1>
                     <p>Ethically sourced gold from our certified mining sites with full transparency and traceability.</p>
@@ -42,7 +89,7 @@
             </div>
             
             <!-- Slide 2 -->
-            <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1586796876136-bb6c8bceef15?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');">
+            <div class="hero-slide" style="background-image: url('assets/images/smelting.jpg');">
                 <div class="hero-content">
                     <h1>State-of-the-Art Refining & Smelting</h1>
                     <p>Transforming raw gold into 99.99% pure investment-grade bars with LBMA certification.</p>
@@ -51,7 +98,7 @@
             </div>
             
             <!-- Slide 3 -->
-            <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1551288043-b5da0ea3a8cf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');">
+            <div class="hero-slide" style="background-image: url('assets/images/global.jpg');">
                 <div class="hero-content">
                     <h1>Global Secure Shipping</h1>
                     <p>Fully insured logistics with real-time tracking for your complete peace of mind.</p>
@@ -60,7 +107,7 @@
             </div>
             
             <!-- Slide 4 -->
-            <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1589652717521-10c0d092dea9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');">
+            <div class="hero-slide" style="background-image: url('assets/images/dust.jpeg');">
                 <div class="hero-content">
                     <h1>Expert Gold Consultation</h1>
                     <p>Personalized guidance for investors, collectors, and institutions in the gold market.</p>
@@ -69,7 +116,7 @@
             </div>
             
             <!-- Slide 5 -->
-            <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1614594975525-4584cef46a17?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');">
+            <div class="hero-slide" style="background-image: url('assets/images/nuggets.jpg');">
                 <div class="hero-content">
                     <h1>Buying & Selling Gold</h1>
                     <p>Competitive prices for gold bars, nuggets, ore, and dust with transparent valuation.</p>
@@ -78,7 +125,17 @@
             </div>
             
             <!-- Slide 6 -->
-            <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1536922246285-4c14b8d17479?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');">
+            <div class="hero-slide" style="background-image: url('assets/images/product.jpg');">
+                <div class="hero-content">
+                    <h1>End-to-End Gold Solutions</h1>
+                    <p>From mine to market, we provide complete gold supply chain services with integrity.</p>
+                    <a href="about.html" class="btn btn-large">Learn About Us</a>
+                </div>
+            </div>
+        </div>
+            
+            <!-- Slide 6 -->
+            <div class="hero-slide" style="background-image: url('assets/images/about.png');">
                 <div class="hero-content">
                     <h1>End-to-End Gold Solutions</h1>
                     <p>From mine to market, we provide complete gold supply chain services with integrity.</p>
@@ -185,55 +242,97 @@
     </section>
 
     <!-- Section 4: Testimonials -->
-    <section class="testimonials" id="testimonials">
-        <div class="container">
-            <h2>Trusted by Investors Worldwide</h2>
-            <div class="testimonial-grid">
-                <!-- Testimonial 1 -->
-                <div class="testimonial-card">
-                    <p class="testimonial-text">As a first-time gold investor, I was nervous about the process. Christal Quest walked me through every step and provided all the documentation I needed. The gold bar arrived exactly as promised.</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">
-                            <i class="fas fa-user"></i>
-                        </div>
-                        <div class="author-info">
-                            <h4>Michael T.</h4>
-                            <p>London, UK</p>
-                        </div>
+   <!-- Section 4: Testimonials -->
+<section class="testimonials" id="testimonials">
+    <div class="container">
+        <h2>Trusted by Investors Worldwide</h2>
+        <div class="testimonial-grid">
+            <!-- Testimonial 1 -->
+            <div class="testimonial-card">
+                <p class="testimonial-text">As a first-time gold investor, I was nervous about the process. Christal Quest walked me through every step and provided all the documentation I needed. The gold bar arrived exactly as promised.</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Michael T.">
+                    </div>
+                    <div class="author-info">
+                        <h4>Michael T.</h4>
+                        <p>London, UK • First-Time Investor</p>
                     </div>
                 </div>
-                
-                <!-- Testimonial 2 -->
-                <div class="testimonial-card">
-                    <p class="testimonial-text">Finally, a company I trust to help me pass on tangible assets to my grandchildren. The secure, insured delivery and LBMA certification gave me complete peace of mind.</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">
-                            <i class="fas fa-user"></i>
-                        </div>
-                        <div class="author-info">
-                            <h4>Sarah Chen</h4>
-                            <p>Toronto, Canada</p>
-                        </div>
+            </div>
+            
+            <!-- Testimonial 2 -->
+            <div class="testimonial-card">
+                <p class="testimonial-text">Finally, a company I trust to help me pass on tangible assets to my grandchildren. The secure, insured delivery and LBMA certification gave me complete peace of mind.</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">
+                        <img src="https://images.unsplash.com/photo-1494790108755-2616b612786?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Sarah Chen">
+                    </div>
+                    <div class="author-info">
+                        <h4>Sarah Chen</h4>
+                        <p>Toronto, Canada • Family Legacy Builder</p>
                     </div>
                 </div>
-                
-                <!-- Testimonial 3 -->
-                <div class="testimonial-card">
-                    <p class="testimonial-text">The logistics were flawless, even with my complex delivery requirements to Singapore. The team handled all customs seamlessly with regular updates throughout.</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">
-                            <i class="fas fa-user"></i>
-                        </div>
-                        <div class="author-info">
-                            <h4>James Robertson</h4>
-                            <p>Dubai, UAE</p>
-                        </div>
+            </div>
+            
+            <!-- Testimonial 3 -->
+            <div class="testimonial-card">
+                <p class="testimonial-text">The logistics were flawless, even with my complex delivery requirements to Singapore. The team handled all customs seamlessly with regular updates throughout.</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="James Robertson">
+                    </div>
+                    <div class="author-info">
+                        <h4>James Robertson</h4>
+                        <p>Dubai, UAE • International Investor</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Testimonial 4 -->
+            <div class="testimonial-card">
+                <p class="testimonial-text">The LBMA certification was non-negotiable for me. After due diligence on several suppliers, Christal Quest was the only one with verifiable certification and ethical sourcing.</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">
+                        <img src="https://images.unsplash.com/photo-1551836026-d5c088b49597?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Dr. Anna Schmidt">
+                    </div>
+                    <div class="author-info">
+                        <h4>Dr. Anna Schmidt</h4>
+                        <p>Berlin, Germany • Astute Collector</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Testimonial 5 -->
+            <div class="testimonial-card">
+                <p class="testimonial-text">I purchased gold as a wedding gift for my daughter. The presentation and authenticity certificates made it extra special. Excellent service from start to finish.</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">
+                        <img src="https://images.unsplash.com/photo-1534751516642-a1af1ef26a56?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Priya Singh">
+                    </div>
+                    <div class="author-info">
+                        <h4>Priya Singh</h4>
+                        <p>Mumbai, India • Purchased as a Gift</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Testimonial 6 -->
+            <div class="testimonial-card">
+                <p class="testimonial-text">My first purchase was so smooth, I've now completed three transactions. Their process is reliable, communication is clear, and the product is always perfect.</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="David Miller">
+                    </div>
+                    <div class="author-info">
+                        <h4>David Miller</h4>
+                        <p>New York, USA • Repeat Client</p>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-
+    </div>
+</section>
     <!-- Section 5: Features/Benefits -->
     <section class="features" id="features">
         <div class="container">

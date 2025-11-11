@@ -7,13 +7,57 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+                /* Updated Logo Styles with Company Name */
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-image {
+            height: 40px;
+            width: auto;
+            transition: all 0.3s ease;
+        }
+
+        .logo-text {
+            font-size: 1.6rem;
+            font-weight: bold;
+            color: var(--primary-gold);
+            line-height: 1;
+        }
+
+        .logo-text span {
+            color: var(--text-light);
+        }
+
+        /* Mobile responsiveness for logo */
+        @media (max-width: 768px) {
+            .logo-text {
+                font-size: 1.3rem;
+            }
+            
+            .logo-image {
+                height: 35px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .logo-text {
+                font-size: 1.1rem;
+            }
+            
+            .logo {
+                gap: 8px;
+            }
+        }
         /* Additional Styles for Product Page */
         .products-hero {
             height: 60vh;
             position: relative;
             overflow: hidden;
             margin-top: 70px;
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1586773860418-d37222d8fce3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('assets/images/bars.jpg');
             background-size: cover;
             background-position: center;
             display: flex;
@@ -286,7 +330,8 @@
     <header>
         <div class="container header-container">
             <div class="logo">
-                <img src="assets/images/logo.png" alt="Christal Quest Limited" class="logo-image">
+                <img src="assets/images/logo.jpeg" alt="Christal Quest Limited" class="logo-image">
+                <div class="logo-text">Crystal<span>Quest</span></div>
             </div>
             <nav>
                 <ul id="nav-menu">
@@ -320,7 +365,7 @@
         <div class="product-grid">
             <!-- Gold Bars -->
             <div class="product-card">
-                <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1586796876136-bb6c8bceef15?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');"></div>
+                <div class="product-image" style="background-image: url('assets/images/investment.jpg');"></div>
                 <div class="product-content">
                     <h3>Investment Gold Bars <span class="purity-badge">99.99%</span></h3>
                     <p>LBMA-certified pure gold bars for secure wealth preservation and investment.</p>
@@ -337,7 +382,7 @@
             
             <!-- Gold Nuggets -->
             <div class="product-card">
-                <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1614594975525-4584cef46a17?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');"></div>
+                <div class="product-image" style="background-image: url('assets/images/dust.jpeg');"></div>
                 <div class="product-content">
                     <h3>Natural Gold Nuggets <span class="purity-badge">80-95%</span></h3>
                     <p>Authentic, naturally formed gold nuggets for collectors and unique investments.</p>
@@ -354,7 +399,7 @@
             
             <!-- Gold Ore -->
             <div class="product-card">
-                <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1536922246285-4c14b8d17479?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');"></div>
+                <div class="product-image" style="background-image: url('assets/images/bearing-ore.jpg');"></div>
                 <div class="product-content">
                     <h3>Gold-Bearing Ore</h3>
                     <p>Raw gold-bearing ore for refiners and processing facilities.</p>
@@ -371,7 +416,7 @@
             
             <!-- Gold Dust -->
             <div class="product-card">
-                <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1551288043-b5da0ea3a8cf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');"></div>
+                <div class="product-image" style="background-image: url('assets/images/gold-dust.jpg');"></div>
                 <div class="product-content">
                     <h3>Gold Dust & Flakes <span class="purity-badge">90-95%</span></h3>
                     <p>Fine gold dust and flakes recovered from alluvial deposits.</p>

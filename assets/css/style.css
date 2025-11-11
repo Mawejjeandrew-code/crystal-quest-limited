@@ -213,16 +213,50 @@ header {
     align-items: center;
 }
 
+/* Updated Logo Styles with Company Name */
 .logo {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: var(--primary-gold);
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
-.logo span {
+.logo-image {
+    height: 40px;
+    width: auto;
+    transition: all 0.3s ease;
+}
+
+.logo-text {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: var(--primary-gold);
+    line-height: 1;
+}
+
+.logo-text span {
     color: var(--text-light);
 }
 
+/* Mobile responsiveness for logo */
+@media (max-width: 768px) {
+    .logo-text {
+        font-size: 1.3rem;
+    }
+    
+    .logo-image {
+        height: 35px;
+    }
+}
+
+@media (max-width: 576px) {
+    .logo-text {
+        font-size: 1.1rem;
+    }
+    
+    .logo {
+        gap: 8px;
+    }
+}
 nav ul {
     display: flex;
     list-style: none;
@@ -532,7 +566,27 @@ nav ul li a:hover:after {
     color: #666;
     font-size: 0.9rem;
 }
+/* Updated Testimonial Author Avatar */
+.author-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 15px;
+    flex-shrink: 0;
+    border: 3px solid var(--primary-gold);
+}
 
+.author-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Remove the old icon styles for author-avatar */
+.author-avatar i {
+    display: none;
+}
 /* Section 5: Features/Benefits */
 .features {
     background-color: #f9f9f9;

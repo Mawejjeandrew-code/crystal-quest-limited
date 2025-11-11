@@ -124,15 +124,50 @@
             align-items: center;
         }
         
-        .logo {
-            font-size: 1.8rem;
-            font-weight: bold;
-            color: var(--primary-gold);
-        }
-        
-        .logo span {
-            color: var(--text-light);
-        }
+        /* Updated Logo Styles with Company Name */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-image {
+    height: 40px;
+    width: auto;
+    transition: all 0.3s ease;
+}
+
+.logo-text {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: var(--primary-gold);
+    line-height: 1;
+}
+
+.logo-text span {
+    color: var(--text-light);
+}
+
+/* Mobile responsiveness for logo */
+@media (max-width: 768px) {
+    .logo-text {
+        font-size: 1.3rem;
+    }
+    
+    .logo-image {
+        height: 35px;
+    }
+}
+
+@media (max-width: 576px) {
+    .logo-text {
+        font-size: 1.1rem;
+    }
+    
+    .logo {
+        gap: 8px;
+    }
+}
         
         nav ul {
             display: flex;
@@ -185,7 +220,7 @@
             position: relative;
             overflow: hidden;
             margin-top: 70px;
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1586773860418-d37222d8fce3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('assets/images/congo.jpg');
             background-size: cover;
             background-position: center;
             display: flex;
@@ -362,7 +397,7 @@
         .world-map {
             position: relative;
             height: 400px;
-            background: url('https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
+            background: url('assets/images/map.jpg');
             background-size: cover;
             background-position: center;
             border-radius: 8px;
@@ -608,6 +643,7 @@
         <div class="container header-container">
             <div class="logo">
                 <img src="assets/images/logo.jpeg" alt="Crystal Quest Limited" class="logo-image">
+                <div class="logo-text">Crystal <span>Quest</span></div>
             </div>
             <nav>
                 <ul id="nav-menu">
@@ -670,7 +706,7 @@
                     <a href="services.html" class="btn">Explore Our Services</a>
                 </div>
                 <div class="history-image">
-                    <img src="https://images.unsplash.com/photo-1589652717521-10c0d092dea9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80" alt="Christal Quest Mining Operation">
+                    <img src="assets/images/history.jpeg" alt="Christal Quest Mining Operation">
                 </div>
             </div>
         </div>
@@ -791,16 +827,16 @@
             
             <div class="team-grid">
                 <div class="team-member">
-                    <div class="member-image" style="background-image: url('https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');"></div>
+                    <div class="member-image" style="background-image: url('assets/images/ceo.png');"></div>
                     <div class="member-info">
-                        <h3>James Rutherford</h3>
+                        <h3>Eric Bismva</h3>
                         <div class="member-role">CEO & Founder</div>
                         <p>With over 20 years in the mining industry, James founded Christal Quest with a vision for ethical gold sourcing.</p>
                     </div>
                 </div>
                 
                 <div class="team-member">
-                    <div class="member-image" style="background-image: url('https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');"></div>
+                    <div class="member-image" style="background-image: url('assets/images/staff.png');"></div>
                     <div class="member-info">
                         <h3>Sarah Chen</h3>
                         <div class="member-role">Chief Operations Officer</div>
@@ -884,6 +920,7 @@
             </div>
         </div>
     </footer>
+    <script src="assets/js/main.js"></script>
 
     <script>
         // Mobile Menu Toggle

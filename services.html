@@ -123,14 +123,49 @@
             align-items: center;
         }
         
+                /* Updated Logo Styles with Company Name */
         .logo {
-            font-size: 1.8rem;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-image {
+            height: 40px;
+            width: auto;
+            transition: all 0.3s ease;
+        }
+
+        .logo-text {
+            font-size: 1.6rem;
             font-weight: bold;
             color: var(--primary-gold);
+            line-height: 1;
         }
-        
-        .logo span {
+
+        .logo-text span {
             color: var(--text-light);
+        }
+
+        /* Mobile responsiveness for logo */
+        @media (max-width: 768px) {
+            .logo-text {
+                font-size: 1.3rem;
+            }
+            
+            .logo-image {
+                height: 35px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .logo-text {
+                font-size: 1.1rem;
+            }
+            
+            .logo {
+                gap: 8px;
+            }
         }
         
         nav ul {
@@ -184,7 +219,7 @@
             position: relative;
             overflow: hidden;
             margin-top: 70px;
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1586773860418-d37222d8fce3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('assets/images/service-header.jpg');
             background-size: cover;
             background-position: center;
             display: flex;
@@ -529,6 +564,7 @@
         <div class="container header-container">
             <div class="logo">
                 <img src="assets/images/logo.jpeg" alt="Crystal Quest Limited" class="logo-image">
+                <div class="logo-text">Crystal<span>Quest</span></div>
             </div>
             <nav>
                 <ul id="nav-menu">
@@ -562,7 +598,7 @@
         <div class="services-grid">
             <!-- Gold Mining Service -->
             <div class="service-card">
-                <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1586773860418-d37222d8fce3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');"></div>
+                <div class="service-image" style="background-image: url('assets/images/mining.jpg');"></div>
                 <div class="service-content">
                     <h3><i class="fas fa-mountain service-icon"></i> Gold Mining</h3>
                     <p>We operate ethically-sourced mining operations with full environmental compliance and transparency. Our mining sites are carefully selected for their high-yield potential and sustainable extraction capabilities.</p>
@@ -579,7 +615,7 @@
             
             <!-- Mineral Consultation -->
             <div class="service-card">
-                <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1589652717521-10c0d092dea9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');"></div>
+                <div class="service-image" style="background-image: url('assets/images/consultation.jpg');"></div>
                 <div class="service-content">
                     <h3><i class="fas fa-chart-line service-icon"></i> Mineral Consultation</h3>
                     <p>Our expert geologists and mining engineers provide comprehensive consultation services for mineral exploration, resource assessment, and mining optimization to maximize your investment returns.</p>
@@ -596,7 +632,7 @@
             
             <!-- Gold Buying & Selling -->
             <div class="service-card">
-                <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1614594975525-4584cef46a17?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');"></div>
+                <div class="service-image" style="background-image: url('assets/images/buying\ and\ selling.jpg');"></div>
                 <div class="service-content">
                     <h3><i class="fas fa-hand-holding-usd service-icon"></i> Gold Buying & Selling</h3>
                     <p>We facilitate secure transactions for buying and selling gold with transparent pricing based on real-time market rates. Our services cater to both individual investors and institutional clients.</p>
@@ -613,7 +649,7 @@
             
             <!-- Refinery & Smelting -->
             <div class="service-card">
-                <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1586796876136-bb6c8bceef15?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');"></div>
+                <div class="service-image" style="background-image: url('assets/images/refinerysmelting.jpg');"></div>
                 <div class="service-content">
                     <h3><i class="fas fa-fire service-icon"></i> Refinery & Smelting</h3>
                     <p>Our state-of-the-art refining and smelting processes transform raw gold into 99.99% pure investment-grade products with LBMA certification, ensuring maximum value and global recognition.</p>
@@ -630,7 +666,7 @@
             
             <!-- Logistics -->
             <div class="service-card">
-                <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1551288043-b5da0ea3a8cf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');"></div>
+                <div class="service-image" style="background-image: url('assets/images/logistics.png');"></div>
                 <div class="service-content">
                     <h3><i class="fas fa-shipping-fast service-icon"></i> Secure Logistics</h3>
                     <p>We provide fully insured, military-grade secure logistics for transporting precious metals globally. Our specialized carriers and tracking systems ensure your assets arrive safely at their destination.</p>

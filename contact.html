@@ -121,17 +121,51 @@
             justify-content: space-between;
             align-items: center;
         }
-        
+            /* Updated Logo Styles with Company Name */
         .logo {
-            font-size: 1.8rem;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-image {
+            height: 40px;
+            width: auto;
+            transition: all 0.3s ease;
+        }
+
+        .logo-text {
+            font-size: 1.6rem;
             font-weight: bold;
             color: var(--primary-gold);
+            line-height: 1;
         }
-        
-        .logo span {
+
+        .logo-text span {
             color: var(--text-light);
         }
-        
+
+        /* Mobile responsiveness for logo */
+        @media (max-width: 768px) {
+            .logo-text {
+                font-size: 1.3rem;
+            }
+            
+            .logo-image {
+                height: 35px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .logo-text {
+                font-size: 1.1rem;
+            }
+            
+            .logo {
+                gap: 8px;
+            }
+        }
+            
         nav ul {
             display: flex;
             list-style: none;
@@ -183,7 +217,7 @@
             position: relative;
             overflow: hidden;
             margin-top: 70px;
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1551288043-b5da0ea3a8cf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('assets/images/office.jpeg');
             background-size: cover;
             background-position: center;
             display: flex;
@@ -505,6 +539,7 @@
         <div class="container header-container">
             <div class="logo">
                 <img src="assets/images/logo.jpeg" alt="crystalquest limited" class="logo-image">
+                <div class="logo-text">Crystal <span>Quest</span></div>
             </div>
             <nav>
                 <ul id="nav-menu">
@@ -639,7 +674,7 @@
                 <!-- Contact Information -->
                 <div class="contact-info">
                     <h2>Get In Touch</h2>
-                    <p>At Christal Quest Limited, we pride ourselves on providing exceptional service to our clients. Whether you're looking to invest in gold, need consultation on mineral resources, or require secure logistics for precious metals, our team of experts is here to help.</p>
+                    <p>At Crystal Quest Limited, we pride ourselves on providing exceptional service to our clients. Whether you're looking to invest in gold, need consultation on mineral resources, or require secure logistics for precious metals, our team of experts is here to help.</p>
                     
                     <div class="contact-details">
                         <h3>Contact Details</h3>
@@ -650,7 +685,7 @@
                             </div>
                             <div class="contact-text">
                                 <h4>Our Office</h4>
-                                <p>123 Gold Avenue<br>Mining District<br>London, UK WC1A 1AA</p>
+                                <p>Bwebajja<br>Entebbe Road<br>Kampla, Uganda</p>
                             </div>
                         </div>
                         
@@ -660,7 +695,7 @@
                             </div>
                             <div class="contact-text">
                                 <h4>Phone Number</h4>
-                                <p>+44 (0) 393-103-608</p>
+                                <p>+256 (0) 393-103-608</p>
                             </div>
                         </div>
                         
@@ -759,6 +794,8 @@
             </div>
         </div>
     </footer>
+
+    <script src="assets/js/main.js"></script>
 
     <script>
         // Mobile Menu Toggle
